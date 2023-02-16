@@ -4,6 +4,6 @@ const ctrlRegistro = require('../controllers/registro.controller')
 const validations = require('../utils/validations')
 
 
-router.get('/registro', validations.validar_registro, ctrlRegistro.registro)
+router.post('/registro', validations.validar_registro, ctrlRegistro.registro)
 
 module.exports = router
