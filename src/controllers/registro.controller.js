@@ -12,7 +12,7 @@ const registro = async (req, res) => {
             return res.status(400).json({ status: false, errors: errors.array() })
         }
 
-        const { correo, contrasena, nombre, apellidos, documento, telefono } = req.body
+        const { correo, contrasena, nombre, apellidos, documento, telefono, tipoUsuario } = req.body
 
         const nuevoUsuario = new ModeloRegistro({
             correo: correo,
@@ -20,7 +20,8 @@ const registro = async (req, res) => {
             nombre: nombre,
             apellidos: apellidos,
             documento: documento,
-            telefono: telefono
+            telefono: telefono,
+            tipoUsuario: tipoUsuario
         })
 
         await nuevoUsuario.save()

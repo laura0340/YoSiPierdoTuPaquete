@@ -8,7 +8,9 @@ const registroSchema = Schema({
     direccionOrigen: { type: String, required: true },
     ciudadDestino: { type: String, required: true },
     direccionDestino: { type: String, required: true },
-    estado: { type: Boolean, default: false }
+    estado: { type: Boolean, default: false },
+    usuario: { type: String, default: "" },
+    empleado: { type: String, default: "" },
 }, {
     timestamps: true
 })

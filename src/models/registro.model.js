@@ -8,6 +8,7 @@ const registroSchema = Schema({
     apellidos: { type: String, required: true },
     documento: { type: Number, unique: true },
     telefono: { type: Number },
+    tipoUsuario: { type: String },
 }, {
     timestamps: true
 })

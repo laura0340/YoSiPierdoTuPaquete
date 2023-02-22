@@ -46,7 +46,8 @@ const ingreso = async (req, res) => {
         //Information to store in the token
         const payload = {
             _id: email._id,
-            correo: email.correo
+            correo: email.correo,
+            rol: email.tipoUsuario
         }
 
         //Generate the token
